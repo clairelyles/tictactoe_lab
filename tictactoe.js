@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	function checkForWinner() {
 		// each click runs checkForWinner function
-		console.log('checking',square);
 		for (var i = 0; i < winningCombo.length; i++) {
 			if (square[winningCombo[i][0]].innerText !== "" &&
 				square[winningCombo[i][0]].innerText === square[winningCombo[i][1]].innerText &&
 				square[winningCombo[i][1]].innerText === square[winningCombo[i][2]].innerText) {
 				alert('You won ' + square[winningCombo[i][2]].innerText + ". Great job!");
+				consol.log(square[winningCombo[i][0]].innerText);
 				return square[winningCombo[i][2]].innerText;
 			};
 		}
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
 	refresh.addEventListener('click', function() {
 		for (i = 0; i < square.length; i++) {
-			console.log('alert!');
+			// console.log('alert!');
 			square[i].innerText = clearBoard
 		}
 	});
@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', function(){
 	// console.log(squares[i]innerText);
 	for (var i = 0; i < square.length; i++) {
 		square[i].addEventListener("click", function() {
-			// alert(this.innerText);
+			// console.log(this.innerText);
 			if (this.innerText === "X" || this.innerText === "O") {
 				return;
 			}
 			// else
 			counter += 1;
-
+1
 			if (counter % 2 === 0) {
 				this.innerText = "O";
 			}
@@ -49,11 +49,6 @@ document.addEventListener('DOMContentLoaded', function(){
 		})
 
 	}
-
-
-	// Winning Combinations
-	// winningCombo[i][0] && winningCombo[i][1] && winningCombo[i][3]
-
 });
 
 
