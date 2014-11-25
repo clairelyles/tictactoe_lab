@@ -3,9 +3,6 @@ var counter = 0;
 var clearBoard = "";
 var winner = document.getElementById('winner');
 
-$(function() {
-	$('ball').ball.on('click', function )
-})
 
 document.addEventListener('DOMContentLoaded', function(){
 	// anonymous function needs to be at top
