@@ -35,10 +35,10 @@ $(function() {
 
 	var checkForWinner = function() {
 		for (var i = 0; i < winningCombo.length; i++) {
-			if (square[winningCombo[i][0]].innerText !== "" &&
-				square[winningCombo[i][0]].innerText === square[winningCombo[i][1]].innerText &&
-				square[winningCombo[i][1]].innerText === square[winningCombo[i][2]].innerText) {
-					alert('You won ' + square[winningCombo[i][2]].innerText + ". Winner winner chicken dinner!");
+			if (square[winningCombo[i][0]].text() !== "" &&
+				square[winningCombo[i][0]].text() === square[winningCombo[i][1]].text() &&
+				square[winningCombo[i][1]].text() === square[winningCombo[i][2]].text()) {
+					alert('You won ' + square[winningCombo[i][2]].text() + ". Winner winner chicken dinner!");
 				return;
 			}
 		}
