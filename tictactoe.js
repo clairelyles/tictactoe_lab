@@ -1,13 +1,27 @@
 
 var counter = 0;
 var clearBoard = "";
+var winner = document.getElementById('winner');
 
+$(function() {
+	$('ball').ball.on('click', function )
+})
 
 document.addEventListener('DOMContentLoaded', function(){
+	// anonymous function needs to be at top
 	var square = document.getElementsByClassName('cell');
 	var refresh = document.getElementById('refresh');
-	var winningCombo = [[0,1,2],[3,4,5],[6,7,8],[0,4,8],[2,4,6],[0,3,6],[1,4,7],[2,5,8]];
+	var winningCombo = [[0,1,2],
+						[3,4,5],
+						[6,7,8],
+						[0,4,8],
+						[2,4,6],
+						[0,3,6],
+						[1,4,7],
+						[2,5,8]
+						];
 
+	// named function can be anywhere in the code
 	function checkForWinner() {
 		// each click runs checkForWinner function
 		for (var i = 0; i < winningCombo.length; i++) {
@@ -15,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function(){
 				square[winningCombo[i][0]].innerText === square[winningCombo[i][1]].innerText &&
 				square[winningCombo[i][1]].innerText === square[winningCombo[i][2]].innerText) {
 				alert('You won ' + square[winningCombo[i][2]].innerText + ". Great job!");
-				consol.log(square[winningCombo[i][0]].innerText);
-				return square[winningCombo[i][2]].innerText;
+				return;
+				winner = square[winningCombo[i][2]].innerText;
 			};
 		}
 	}
@@ -29,16 +43,14 @@ document.addEventListener('DOMContentLoaded', function(){
 	});
 
 
-	// console.log(squares[i]innerText);
 	for (var i = 0; i < square.length; i++) {
 		square[i].addEventListener("click", function() {
-			// console.log(this.innerText);
 			if (this.innerText === "X" || this.innerText === "O") {
 				return;
 			}
 			// else
 			counter += 1;
-1
+
 			if (counter % 2 === 0) {
 				this.innerText = "O";
 			}
