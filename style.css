@@ -14,7 +14,7 @@
 
   }
   .cell {
-    height: 0vw;
+    height: 0vh;
     padding-bottom: 33%;
     line-height: 120%;
     vertical-align: middle;
@@ -33,7 +33,7 @@
   }
   #col3 {
     border-bottom:  2px dashed #7A7A7A;
-  } 
+  }
   #col4 {
     border-right: 2px dashed #7A7A7A;
     border-bottom:  2px dashed #7A7A7A;
